@@ -1,0 +1,48 @@
+@keyframes fallDown{
+    0% {
+        opacity: 0;
+        transform: translateY(-75px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+html {
+    background: linear-gradient(180deg, rgb(199, 106, 0) 0%, rgb(224, 96, 37) 60%, rgb(249, 65, 65) 100%) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.title1 {
+    animation: 1.25s ease 0s 1 fallDown;
+    text-align: center;
+}
+
+.title1TextChild {
+    color: #f62222;
+    text-shadow: 2px 2px 2px #ec940f; 
+}
+
+.RFBust > img {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+.RFBust {
+    animation: 1.25s ease 0s 1 fallDown;
+}
+
+.description1 {
+    animation: 1.25s ease 0s 1 fallDown;
+    text-align: center;
+}

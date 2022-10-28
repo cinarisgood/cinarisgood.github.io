@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>RF Official Fan Site</title>
+    </head>
+    <body>
+        <div id="results"></div>
+        <script>
+            const resultsList = document.getElementById('results')
+            new URLSearchParams(window.location.search).forEach((value, 
+            name) => {
+                if (`${name}` == "username") {
+                    resultsList.append(`Thank you ${value} for submitting your request of:`);
+                } 
+                resultsList.append(document.createElement('br'))
+                if (`${name}` == "request") {
+                    resultsList.append(`${value}`);
+                }
+            })
+        </script>
+    <!-- 
+    Welcome <?php echo $_GET["username"]; ?><br>
+    Thank you for submitting your request of: <?php echo $_GET["request"]; ?>
+    -->
+        <link rel="stylesheet" href="mainStyle.css">
+    </body>
+</html>
