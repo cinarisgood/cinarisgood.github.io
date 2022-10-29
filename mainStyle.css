@@ -9,6 +9,15 @@
     }
 }
 
+@keyframes bustHover{
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
 html {
     background: linear-gradient(180deg, rgb(199, 106, 0) 0%, rgb(224, 96, 37) 60%, rgb(249, 65, 65) 100%) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -31,11 +40,22 @@ html {
     text-shadow: 2px 2px 2px #ec940f; 
 }
 
+.RFBust > img:hover {
+    /* animation: .25s ease-out 0s 1 bustHover; */
+    transform: scale(1.125);
+}
+
+
 .RFBust > img {
     display: block;
     width: auto;
     height: auto;
     margin: 0 auto;
+    transform: scale(1);
+    -webkit-transition: width .25s ease-in-out, height .25s ease-in-out, scale .25s ease-in-out, transform .25s ease-in-out;
+    -moz-transition: width .25s ease-in-out, height .25s ease-in-out, scale .25s ease-in-out, transform .25s ease-in-out;
+    -o-transition: width .25s ease-in-out, height .25s ease-in-out, scale .25s ease-in-out, transform .25s ease-in-out;
+    transition: width .25s ease-in-out, height .25s ease-in-out, scale .25s ease-in-out, transform .25s ease-in-out;
 }
 
 .RFBust {
@@ -45,4 +65,64 @@ html {
 .description1 {
     animation: 1.25s ease 0s 1 fallDown;
     text-align: center;
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 550px;
+    margin: 0 auto;
+}
+
+.gameBGContainer {
+    width: 100%;
+    height: 75%;
+    position: inherit;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 5%;
+    background-color: #ec940f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameBGContainer > * {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-self: center;
+    /*
+    margin: 50%;
+    top: 50%;
+    left: 50%;
+    position: inherit;
+    */
+    transform: scale(2.25);
+}
+
+.gameTitle {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: -50%;
+    /*
+    left: 25%;
+    */
+    padding: 10px;
+    vertical-align: top;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    /*
+    margin: 50%;
+    top: 50%;
+    left: 50%;
+    position: inherit;
+    */
 }
