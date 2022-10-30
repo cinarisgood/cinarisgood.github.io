@@ -130,7 +130,23 @@
                 planeMesh = new THREE.Mesh(g, m);
                 planeMesh.position.set((mazeDimension-1)/2, (mazeDimension-1)/2, 0);
                 planeMesh.rotation.set(Math.PI/2, 0, 0);
-                scene.add(planeMesh);                
+                scene.add(planeMesh);  
+                
+                // Add the Sound/Song.
+                const listener = new THREE.AudioListener();
+                camera.add( listener );
+
+                // create a global audio source
+                const sound = new THREE.Audio( listener );
+
+                // load a sound and set it as the Audio object's buffer
+                const audioLoader = new THREE.AudioLoader();
+                audioLoader.load( 'LuckNumb.mp3', function( buffer ) {
+                    sound.setBuffer( buffer );
+                    sound.setLoop( true );
+                    sound.setVolume( 0.5 );
+                    sound.play();
+                });
 
             }
 
@@ -139,7 +155,7 @@
 
                 // Apply "friction". 
                 var lv = wBall.GetLinearVelocity();
-                lv.Multiply(0.95);
+                lv.Multiply(0.65);
                 wBall.SetLinearVelocity(lv);
                 
                 // Apply user-directed force.
@@ -177,7 +193,7 @@
                 camera.position.z += (5 - camera.position.z) * 0.1;
                 light.position.x = camera.position.x;
                 light.position.y = camera.position.y;
-                light.position.z = camera.position.z - 3.7;
+                light.position.z = camera.position.z - 3.8;
             }
 
 
