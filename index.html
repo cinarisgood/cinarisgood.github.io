@@ -3,38 +3,51 @@
 <html>
     <head>
         <title>RF Official Fan Site</title>
+        <link rel="stylesheet" href="mainStyle.css">
     </head>
     <body>
         <div class="title1">
             <h1 class="title1TextChild">RF Official Fan Site</h1>
         </div>
+
         <div class="RFBust">
             <img src="assets/images/RFProfilePic.jpg"><img>
         </div>
+
         <div class="description1">
-        <h3>Welcome to the RF Official Fan Site. In this website, you can talk about Luck's channel, you can play games, and you can explore all of the different pages. Have fun!</h3>
+            <h3>Welcome to the RF Official Fan Site. In this website, you can talk about Luck's channel, you can play games, and you can explore all of the different pages. Have fun!</h3>
         </div>
-        <form action="submitForm.html" method="GET">
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username"><br>
-            <label for="request">Request:</label><br>
-            <input type="text" id="request" name="request"><br><br>
-            <input type="submit" value="Submit">
-        </form>
-        <div class="gameContainer">
-            <div class="gameBGContainer MazeRoll">
-                <div class="gameTitle">
-                    <h3>Play <a href="/assets/externalSource/Astray-LuckBallClone-master/index.html" target="_blank" rel="noopener noreferrer">Luck Maze</a></h3>
-                </div>
-                <iframe id="testGameFrame" src="assets/externalSource/Astray-LuckBallClone-master/index.html">
-                </iframe>
-                <!-- <script src="https://cdn.htmlgames.com/embed.js?game=MazeRoll&amp;bgcolor=white"></script><iframe id="ZMgameFrame" src="http://cdn.htmlgames.com/MazeRoll/index.html?bgcolor=white" width="800" height="480" frameborder="0" style="display:block" allowfullscreen=""></iframe> -->
-            </div>    
+
+        <div class="requestForm">
+            <form action="submitForm.html" method="GET">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="request">Request:</label><br>
+                <input type="text" id="request" name="request"><br><br>
+                <input type="submit" value="Submit">
+            </form>
         </div>
+
+        <section class="gameSection">
+            <div class="gameContainer">
+                <div class="gameBGContainer MazeRoll">
+                    <div class="gameTitle">
+                        <h3>Play <a href="/assets/externalSource/Astray-LuckBallClone-master/index.html" target="_blank" rel="noopener noreferrer">Luck Maze</a></h3>
+                    </div>
+                    <iframe id="testGameFrame" src="assets/externalSource/Astray-LuckBallClone-master/index.html">
+                    </iframe>
+                    <!-- <script src="https://cdn.htmlgames.com/embed.js?game=MazeRoll&amp;bgcolor=white"></script><iframe id="ZMgameFrame" src="http://cdn.htmlgames.com/MazeRoll/index.html?bgcolor=white" width="800" height="480" frameborder="0" style="display:block" allowfullscreen=""></iframe> -->
+                </div>    
+            </div>
+        </section>   
+
+        <div>
+            <iframe width="642" height="361" src="https://www.youtube.com/embed/kF7ts9h2UEY" title="LUCKCLAN CHILLY DRAMA 2022-11-13" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
           <?php
           $test = "Hello Luckadian World!";
           echo $test;
           ?>
-        <link rel="stylesheet" href="mainStyle.css">
     </body>
 </html>

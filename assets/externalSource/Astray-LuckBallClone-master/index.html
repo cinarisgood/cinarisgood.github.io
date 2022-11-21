@@ -132,6 +132,7 @@
                 planeMesh.rotation.set(Math.PI/2, 0, 0);
                 scene.add(planeMesh);  
                 
+                /*
                 // Add the Sound/Song.
                 const listener = new THREE.AudioListener();
                 camera.add( listener );
@@ -147,7 +148,7 @@
                     sound.setVolume( 0.5 );
                     sound.play();
                 });
-
+                */
             }
 
 
@@ -155,7 +156,7 @@
 
                 // Apply "friction". 
                 var lv = wBall.GetLinearVelocity();
-                lv.Multiply(0.65);
+                lv.Multiply(.98);
                 wBall.SetLinearVelocity(lv);
                 
                 // Apply user-directed force.
